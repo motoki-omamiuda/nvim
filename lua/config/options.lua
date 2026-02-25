@@ -5,3 +5,5 @@ vim.opt.shiftwidth = 2         -- インデント時の幅をスペース個数�
 vim.opt.tabstop = 2            -- タブ文字を画面上でスペース個数設定
 vim.opt.ignorecase = true      -- 検索時に大文字・小文字を区別しない
 vim.opt.smartcase = false      -- 検索語に大文字が含まれる場合のみ大小区別する
+vim.opt.clipboard = "unnamedplus" -- コピペを可能にする
+vim.opt.fileformat = "unix"
