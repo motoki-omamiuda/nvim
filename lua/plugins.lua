@@ -1,6 +1,5 @@
 require("lazy").setup({
-  -- ここにプラグインを直接並べて書く！
-  
+ 
   -- 1. サイドバー (nvim-tree)
   {
     "nvim-tree/nvim-tree.lua",
