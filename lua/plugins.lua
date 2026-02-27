@@ -6,7 +6,8 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("nvim-tree").setup({
-        view = { width = 30, side = "left" }
+        view = { width = 30, side = "left" },
+        git = { enable = true, ignore = false, timeout = 500 },
       })
     end,
   },
