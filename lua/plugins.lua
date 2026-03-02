@@ -15,39 +15,6 @@ require("lazy").setup({
     },
   },
 
-  -- lspconfig
-  -- description: activate ruff and pyright
-  {
-    "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-    },
-    opts = {
-      servers = {
-        pyright = {},
-        ruff = {},
-      },
-    },
-    config = function(_, opts)
-      for server, config in pairs(opts.servers) do
-        vim.lsp.config(server, config)
-        vim.lsp.enable(server)
-      end
-    end,
-  },
-
-  -- mason
-  -- description: setup for  LSP server
-  {
-    "williamboman/mason.nvim",
-    cmd = "Mason",
-    opts = {
-      ensure_installed = { "pyright", "ruff" },
-    },
-  },
-
   -- git sign
   -- description: display git diffs
   {
